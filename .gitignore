@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.idea/
+.vscode/
+.env
+.env.*
+*.log
+output/
+runs/
+backup*/
+*.db
+*.sqlite*
+verification.json
+verification_preview.png

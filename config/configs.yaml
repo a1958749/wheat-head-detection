@@ -1,0 +1,50 @@
+APP:
+  system_title: 小麦麦穗检测识别系统
+  system_subtitle: 基于改进 YOLOv8 的小麦麦穗智能检测与分析平台
+  overview_description: 系统面向精准农业场景，提供小麦麦穗目标检测、结果管理、数据分析与工程化配置管理能力，可服务于田间巡检、产量评估与农情辅助分析。
+MODEL:
+  weight: ./weights/yolov8n_c2fema_wiou_best.pt
+  device: '0'
+  conf: 0.4
+  classes: null
+  imgsize: 768
+  baseline_name: YOLOv8n
+  model_name: YOLOv8n-C2fEMA-WIoU
+  backbone: YOLOv8n + C2f-EMA + WIoU
+  description: 基于YOLOv8n并融合C2f-EMA结构与WIoU定位约束的小麦麦穗检测模型，适用于图像、视频与实时流检测任务。
+  improvement_points:
+  - C2f内部EMA注意力增强
+  - WIoU边界框定位优化
+  metrics:
+    mAP50: '0.944603'
+    Precision: '0.923962'
+    Recall: '0.886569'
+    F1: '0.904879'
+    mAP50_95: '0.544774'
+PATHS:
+  output_root: ./output/sessions
+  hero_image: ./icon/zhutu2.png
+  background_image: ./icon/background.jpg
+  sample_dir: ./img
+  weights_root: ./weights
+RUNTIME:
+  camera_index: 0
+  playback_interval_ms: 80
+  history_limit: 2000
+  default_theme: agriculture_light
+  default_image_mode: dual
+  default_table_font_size: 10
+FEATURES:
+  auto_save_result_image: true
+  auto_save_structured_record: true
+  auto_export_session_summary: false
+  enable_model_switch: true
+DISPLAY:
+  theme: agriculture_light
+  image_view_mode: dual
+  table_font_size: 10
+LABELS:
+  all_targets: 全部目标
+  no_target: 无检测目标
+CLASS_MAP:
+  wheat: 麦穗

@@ -1,0 +1,2 @@
+"model","precision","recall","f1","map50","map50_95","imgsz","batch","workers"
+"YOLOv8n + C2f-EMA + WIoU full hyperparam final","0.9239624806989898","0.8865688098683757","0.904879491610042","0.9446028918521021","0.5447744838843553","768","8","4"

@@ -1,0 +1,26 @@
+{
+  "model": "YOLOv8n + C2f-EMA + WIoU",
+  "weight": "weights/yolov8n_c2fema_wiou_best.pt",
+  "weight_sha256": "f29c489c4c79eabda7faf03d54365f2cb37a357ba864c4da707e5e98c90e84ed",
+  "training_run": "final_c2f_ema_wiou_full_hparam_200e_v1",
+  "epochs_requested": 200,
+  "epochs_completed": 144,
+  "best_epoch_by_val_map50_95": 94,
+  "lr0": 0.01,
+  "optimizer": "AdamW",
+  "imgsz": 768,
+  "batch": 8,
+  "workers": 4,
+  "cache": "ram",
+  "close_mosaic": 0,
+  "amp": true,
+  "deterministic": false,
+  "test": {
+    "precision": 0.9239624806989898,
+    "recall": 0.8865688098683757,
+    "f1": 0.904879491610042,
+    "map50": 0.9446028918521021,
+    "map50_95": 0.5447744838843553
+  },
+  "provenance": "Existing final test CSV; no test rerun during packaging"
+}
